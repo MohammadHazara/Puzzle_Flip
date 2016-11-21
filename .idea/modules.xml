@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/PuzzleFlip.iml" filepath="$PROJECT_DIR$/PuzzleFlip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Puzzle_Flip.iml" filepath="$PROJECT_DIR$/Puzzle_Flip.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
