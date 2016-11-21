@@ -1,8 +1,5 @@
 <resources>
     <string name="app_name">Puzzle Flip</string>
-
-
-
-
+    <string name="welcomeText">Hello dear boy... Welcome</string>
 
 </resources>
