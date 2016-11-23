@@ -1,6 +1,7 @@
 package dtu.grp20.puzzleflip;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.Canvas;
 import android.graphics.Paint;
@@ -19,12 +20,10 @@ import android.widget.Toast;
 
 public class GameActivity extends AppCompatActivity {
 
-    ImageView brik1;
+    ImageView brik1, hint;
     WebView webView ;
     float x,y;
     float xFingerSidst , yFingerSidst;
-    MotionEvent event;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +31,17 @@ public class GameActivity extends AppCompatActivity {
         setContentView(R.layout.activity_game);
 
         brik1 = (ImageView) findViewById(R.id.brik1);
+        hint = (ImageView) findViewById(R.id.hint);
+
+        hint.setOnClickListener(
+                new ImageView.OnClickListener(){
+                    @Override
+                    public void onClick(View v) {
+                        startActivity(new Intent(GameActivity.this, HintActivity.class));
+                    }
+                });
 
     }
-
 
     @Override
     public boolean onTrackballEvent(MotionEvent event) {

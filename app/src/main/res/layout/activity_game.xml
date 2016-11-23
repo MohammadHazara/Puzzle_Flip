@@ -18,13 +18,22 @@
         android:layout_alignParentStart="true" />
 
     <ImageView
-        android:layout_width="70dp"
-        android:layout_height="140dp"
+        android:layout_width="68dp"
         app:srcCompat="@drawable/b1"
         android:id="@+id/brik1"
-        android:layout_marginBottom="18dp"
-        android:layout_marginEnd="116dp"
+        android:layout_marginBottom="16dp"
+        android:layout_marginEnd="44dp"
+        android:layout_height="136dp"
         android:layout_alignParentBottom="true"
+        android:layout_toStartOf="@+id/hint" />
+
+    <ImageView
+        android:layout_width="60dp"
+        app:srcCompat="@drawable/hintbutton"
+        android:layout_marginEnd="17dp"
+        android:id="@+id/hint"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
 </RelativeLayout>

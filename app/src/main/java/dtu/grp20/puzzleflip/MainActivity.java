@@ -10,7 +10,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
-    Button startNewGame, continueGame;
+    Button startNewGame, settingsButton;
     ImageView imageView;
     TextView textView;
 
@@ -18,9 +18,12 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_main);
+
         startNewGame = (Button) findViewById(R.id.startNewGameButton);
-        continueGame = (Button) findViewById(R.id.continueGameButton);
+        settingsButton = (Button) findViewById(R.id.settings);
+
         textView = (TextView) findViewById(R.id.textView);
 
         startNewGame.setOnClickListener(
@@ -32,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 }
         );
 
-        continueGame.setOnClickListener(
+        settingsButton.setOnClickListener(
                 new Button.OnClickListener(){
 
                     @Override
@@ -41,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
                     }
                 }
         );
-
 
     }
 }
