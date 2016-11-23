@@ -19,7 +19,7 @@ import android.widget.Toast;
 
 public class GameActivity extends AppCompatActivity {
 
-    ImageView imageView;
+    ImageView brik1;
     WebView webView ;
     float x,y;
     float xFingerSidst , yFingerSidst;
@@ -31,7 +31,7 @@ public class GameActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game);
 
-        imageView = (ImageView) findViewById(R.id.brik1);
+        brik1 = (ImageView) findViewById(R.id.brik1);
 
     }
 
@@ -49,8 +49,8 @@ public class GameActivity extends AppCompatActivity {
         System.out.println(event.getAction());
         if (event.getAction() == MotionEvent.ACTION_MOVE ) {
             // husk startpunkt
-            imageView.setX(event.getX());
-            imageView.setY(event.getY());
+            brik1.setX(event.getX());
+            brik1.setY(event.getY());
             float dx = event.getX() - xFingerSidst;
             float dy = event.getY() - yFingerSidst;
             x = x + dx;

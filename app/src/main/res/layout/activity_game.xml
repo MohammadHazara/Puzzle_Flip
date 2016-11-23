@@ -10,18 +10,21 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/b1"
-        android:id="@+id/brik1"
+        app:srcCompat="@drawable/gameactivity"
+        android:id="@+id/imageView3"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="24dp" />
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true" />
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/b9"
-        android:layout_marginTop="36dp"
-        android:id="@+id/imageView3"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_width="70dp"
+        android:layout_height="140dp"
+        app:srcCompat="@drawable/b1"
+        android:id="@+id/brik1"
+        android:layout_marginBottom="18dp"
+        android:layout_marginEnd="116dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" />
 
 </RelativeLayout>
