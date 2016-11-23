@@ -29,62 +29,9 @@ public class GameActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-
         setContentView(R.layout.activity_game);
 
         imageView = (ImageView) findViewById(R.id.brik1);
-
-
-
-        /*imageView.setOnLongClickListener(new View.OnLongClickListener() {
-            @Override
-            public boolean onLongClick(View v) {
-                Log.d("","on touch");
-                ClipData data = ClipData.newPlainText("ne","me");
-                View.DragShadowBuilder dsb = new View.DragShadowBuilder(v);
-                v.startDrag(data,dsb,v,0);
-                v.setVisibility(View.INVISIBLE);
-                return true;
-
-            }
-        });
-
-
-        imageView.setOnDragListener(new View.OnDragListener() {
-            @Override
-            public boolean onDrag(View v, DragEvent event) {
-
-                System.out.print("Whatever");
-                int action = event.getAction();
-                switch (event.getAction()) {
-                    case DragEvent.ACTION_DRAG_STARTED:
-                        // do nothing
-                        break;
-                    case DragEvent.ACTION_DRAG_ENTERED:
-                        break;
-                    case DragEvent.ACTION_DRAG_EXITED:
-                        break;
-                    case DragEvent.ACTION_DROP:
-                        // Dropped, reassign View to ViewGroup
-                        v.setX(event.getX()); //-(v.getWidth()/2));
-                        v.setY(event.getY()); //-(v.getHeight()/2));
-                        v.setVisibility(View.VISIBLE);
-                        System.out.print("Whatever") ;
-                        return true;
-                    case DragEvent.ACTION_DRAG_ENDED:
-
-                        break;
-                    default:
-                        break;
-                }
-                Log.d("","on drag");
-                return true;
-            }
-        });*/
-
-
-
 
     }
 
@@ -100,10 +47,10 @@ public class GameActivity extends AppCompatActivity {
     public boolean onTouchEvent(MotionEvent event) {
         System.out.println(event);
         System.out.println(event.getAction());
-         imageView.setX(event.getX()-(imageView.getWidth()/2));
-         imageView.setY(event.getY()-(imageView.getHeight()/2));
-        if (event.getAction() == MotionEvent.ACTION_MOVE) {
+        if (event.getAction() == MotionEvent.ACTION_MOVE ) {
             // husk startpunkt
+            imageView.setX(event.getX());
+            imageView.setY(event.getY());
             float dx = event.getX() - xFingerSidst;
             float dy = event.getY() - yFingerSidst;
             x = x + dx;
